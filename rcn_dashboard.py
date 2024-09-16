@@ -1,3 +1,4 @@
+import streamlit as st
 import pandas as pd
 from src.scrape import scrape
 
@@ -9,4 +10,5 @@ df = scrape(url)
 
 # get index, where 'Fahrer' == 'Schall'
 index = df.index[df['Fahrer'] == 'Schall'][0]
-print(df.iloc[index])
+
+st.write(df.iloc[index])
