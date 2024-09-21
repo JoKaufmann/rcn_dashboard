@@ -1,7 +1,9 @@
 import requests
 import pandas as pd
 from bs4 import BeautifulSoup
+import streamlit as st
 
+@st.fragment(run_every="2s")
 def scrape(url):
     # Send a GET request to the webpage
     response = requests.get(url)
